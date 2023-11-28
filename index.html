@@ -6,108 +6,84 @@
     <title>Black, Blue, and Gray Website</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
             color: #333;
         }
 
         header {
-            background-color: #000;
+            background-color: #2e3d49;
             color: #fff;
-            padding: 1rem;
+            padding: 10px;
             text-align: center;
-        }
-
-        nav ul {
-            background-color: #222;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        nav ul li a {
-            display: block;
-            color: #fff;
-            text-align: center;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            background-color: #111;
-        }
-
-        .feature-image {
-            width: 100%;
-            height: 400px;
-            background-color: #555;
-            background-image: url('feature-image.jpg');
-            background-size: cover;
-            background-position: center;
         }
 
         .content {
-            padding: 2rem;
-            margin-right: 25%; /* Space for the sidebar */
+            margin: 15px;
         }
 
-        .sidebar {
-            width: 25%;
-            float: right;
-            padding: 2rem;
-            background-color: #222;
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .dark-theme {
+            background-color: #2e3d49;
             color: #fff;
         }
 
-        footer {
-            background-color: #000;
+        .blue-theme {
+            background-color: #007BFF;
             color: #fff;
-            padding: 1rem;
+        }
+
+        .gray-theme {
+            background-color: #6c757d;
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #2e3d49;
+            color: #fff;
             text-align: center;
-            clear: both; /* Clear the float */
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-
-            .content, .sidebar {
-                margin-right: 0;
-            }
+            padding: 10px;
+            margin-top: 15px;
         }
     </style>
+    <script>
+        function toggleTheme(theme) {
+            var body = document.body;
+            body.classList.remove('dark-theme', 'blue-theme', 'gray-theme');
+            body.classList.add(theme);
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Website</h1>
+        <h1>Welcome to My Website</h1>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="feature-image"></div>
 
     <div class="content">
         <h2>Featured Content</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et lorem nunc. Nulla facilisi. In eget fermentum lectus, et posuere mi. Quisque ac sem et purus tempus consequat.</p>
-    </div>
-
-    <div class="sidebar">
-        <h2>Sidebar</h2>
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et lorem nunc. Nulla facilisi. In eget fermentum lectus, et posuere mi. Quisque ac sem et purus tempus consequat.</p>
     </div>
 
-    <footer>
-        <p>&copy; 2022 Our Website. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+        <p>&copy; 2022 My Website. All rights reserved.</p>
+        <button onclick="toggleTheme('dark-theme')">Dark</button>
+        <button onclick="toggleTheme('blue-theme')">Blue</button>
+        <button onclick="toggleTheme('gray-theme')">Gray</button>
+    </div>
 </body>
 </html>
