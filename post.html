@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Social Media Website</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <div id="imageGallery">
+        <!-- Images will be displayed here -->
+    </div>
+    <div>
+        <input type="file" accept="image/*" id="imageInput">
+        <button onclick="uploadImage()">Upload Image</button>
+    </div>
+    <div>
+        <input type="text" id="commentInput" placeholder="Add a comment">
+        <button onclick="addComment()">Add Comment</button>
+    </div>
+    <script>
+        let images = []; // Array to store image data
+        let comments = []; // Array to store comments
+        function uploadImage() {
+            const input = document.getElementById('imageInput');
+            const file = input.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageData = {
+                        src: e.target.result,
+                        likes: 0,
+                        comments: [],
+                    };
+                    images.push(imageData);
+                    renderImages();
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        function addComment() {
+            const commentInput = document.getElementById('commentInput');
+            const commentText = commentInput.value.trim();
+            if (commentText !== '') {
+                const selectedImage = images[0]; // Assuming you are commenting on the first image
+                selectedImage.comments.push(commentText);
+                renderImages();
+            }
+        }
+        function likeImage(index) {
+            const selectedImage = images[index];
+            selectedImage.likes += 1;
+            renderImages();
+        }
+        function renderImages() {
+            const gallery = document.getElementById('imageGallery');
+            gallery.innerHTML = '';
+
+            images.forEach((image, index) => {
+                const imageContainer = document.createElement('div');
+                imageContainer.innerHTML = `
+                    <img src="${image.src}" alt="Image ${index}">
+                    <p>Likes: ${image.likes}</p>
+                    <button onclick="likeImage(${index})">Like</button>
+                    <ul>${image.comments.map(comment => `<li>${comment}</li>`).join('')}</ul>
+                `;
+                gallery.appendChild(imageContainer);
+            });
+        }
+        // Initial rendering
+        renderImages();
+    </script>
+</body>
+</html>
