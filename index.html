@@ -44,6 +44,33 @@
             color: white;
             font-size: 14px;
         }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .box h2 {
+            margin: 0;
+            padding: 0;
+            color: #f78ca0;
+            font-size: 24px;
+        }
+
+        .box p {
+            color: #666;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -52,12 +79,15 @@
     </header>
 
     <main>
-        <p>Welcome to the overly designed homepage! Here, you can find all the essential links and information.</p>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="box">
+            <h2>About</h2>
+            <p>Learn more about our company.</p>
+        </div>
+
+        <div class="box">
+            <h2>Contact</h2>
+            <p>Get in touch with us.</p>
+        </div>
     </main>
 
     <div class="footer">
