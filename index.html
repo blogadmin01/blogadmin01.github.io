@@ -1,71 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    color: #fff;
-}
-
-header {
-    background-color: #222;
-    padding: 20px;
-}
-
-header h1 {
-    display: inline;
-    margin-right: 10px;
-}
-
-header nav ul {
-    display: inline;
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-main {
-    padding: 20px;
-}
-
-.large-title-box {
-    position: relative;
-    overflow: hidden;
-}
-
-.large-title-box img {
-    width: 100%;
-}
-
-.large-title-box h2 {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    margin: 0;
-}
-
-.descriptions-box h2 {
-    margin-bottom: 10px;
-}
-
-.pictures-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-}
-
-.picture-slot img {
-    width: 100%;
-    height: auto;
-}
-
-footer {
-    background-color: #222;
-    padding: 20px;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title-box">
+        <h1>Large Title</h1>
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+    </div>
+    <div class="description-box">
+        <p>Description Text</p>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="pic1.jpg" alt="Picture 1">
+            <p>Picture 1 Description</p>
+        </div>
+        <!-- Repeat for each picture -->
+    </div>
+</body>
+</html>
