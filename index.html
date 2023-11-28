@@ -3,130 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Overly Designed Homepage</title>
+    <title>Homepage</title>
     <style>
         body {
-            font-family: Charlesworth, sans-serif;
-            background-color: #000000;
+            font-family: 'Charlesworth', sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 100%);
-            padding: 40px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px 0;
             text-align: center;
-            color: white;
-            font-size: 28px;
         }
 
-        main {
-            padding: 20px;
+        .header h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .gallery figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        .gallery figcaption {
+            background-color: #f1f1f1;
+            padding: 15px;
             text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        a:hover {
-            color: #666;
-            font-size: 22px;
         }
 
         .footer {
-            background-color: #333;
-            padding: 20px;
+            background-color: #f1f1f1;
+            padding: 20px 0;
             text-align: center;
-            color: white;
-            font-size: 14px;
-        }
-
-        .box {
-            width: 300px;
-            height: 300px;
-            margin: 50px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .box:hover {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .box h2 {
-            margin: 0;
-            padding: 0;
-            color: #f78ca0;
-            font-size: 24px;
-        }
-
-        .box p {
-            color: #666;
-            font-size: 16px;
-        }
-
-        .hero {
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-kGxdvfwbEC6fUyBjJ2JxpkU6B76UoemZXw&usqp=CAU');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 48px;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                height: 300px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .box {
-                width: 100%;
-                height: auto;
-                margin: 20px 0;
-            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Ambrosia De Ismaelians</h1>
+    <header class="header">
+        <h1>Welcome to Our Homepage</h1>
     </header>
 
-    <div class="hero">
-        <h1>Home Economics 12 A</h1>
-    </div>
-
-    <main>
-        <div class="box">
-            <h2>About</h2>
-            <p>Home Economics 12 A, particularly in the kitchen, poses a unique set of challenges that extend beyond the culinary realm. Amidst the seemingly straightforward pursuit of culinary skills, students encounter the intricacies of time management, precision, and multitasking. The kitchen becomes both a canvas and a battleground where mastering diverse cooking techniques intersects with the demanding orchestration of various elements simultaneously.</p>
+    <section class="container">
+        <h2>Featured Gallery</h2>
+        <div class="gallery">
+            <figure>
+                <img src="https://via.placeholder.com/250" alt="Placeholder Image">
+                <figcaption>Image Description</figcaption>
+            </figure>
+            <figure>
+                <img src="https://via.placeholder.com/250" alt="Placeholder Image">
+                <figcaption>Image Description</figcaption>
+            </figure>
+            <figure>
+                <img src="https://via.placeholder.com/250" alt="Placeholder Image">
+                <figcaption>Image Description</figcaption>
+            </figure>
+            <figure>
+                <img src="https://via.placeholder.com/250" alt="Placeholder Image">
+                <figcaption>Image Description</figcaption>
+            </figure>
+            <figure>
+                <img src="https://via.placeholder.com/250" alt="Placeholder Image">
+                <figcaption>Image Description</figcaption>
+            </figure>
+            <figure>
+                <img src="https://via.placeholder.com/250" alt="Placeholder Image">
+                <figcaption>Image Description</figcaption>
+            </figure>
         </div>
+    </section>
 
-        <div class="box">
-            <h2>Contact</h2>
-            <p>3rd floor Bautista Building.</p>
-        </div>
-    </main>
-
-    <div class="footer">
-        <p>Created by: Yuan Espejo</p>
-    </div>
+    <footer class="footer">
+        <p>&copy; 2022 Company Name. All rights reserved.</p>
+    </footer>
 </body>
+</html>
