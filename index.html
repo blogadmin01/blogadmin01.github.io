@@ -19,6 +19,17 @@
             font-size: 18px;
             line-height: 1.6;
         }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -27,9 +38,16 @@
     </header>
     <section>
         <p>This is the main content of your website. You can customize and add more sections as needed.</p>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Description of Image 1">
+            <img src="image2.jpg" alt="Description of Image 2">
+            <img src="image3.jpg" alt="Description of Image 3">
+            <!-- Add more images as needed -->
+        </div>
     </section>
     <footer>
         &copy; 2023 Your Website | Designed by You
     </footer>
 </body>
 </html>
+
