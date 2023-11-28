@@ -50,6 +50,15 @@
 
         .content {
             padding: 2rem;
+            margin-right: 25%; /* Space for the sidebar */
+        }
+
+        .sidebar {
+            width: 25%;
+            float: right;
+            padding: 2rem;
+            background-color: #222;
+            color: #fff;
         }
 
         footer {
@@ -57,11 +66,16 @@
             color: #fff;
             padding: 1rem;
             text-align: center;
+            clear: both; /* Clear the float */
         }
 
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
+            }
+
+            .content, .sidebar {
+                margin-right: 0;
             }
         }
     </style>
@@ -84,6 +98,11 @@
 
     <div class="content">
         <h2>Featured Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et lorem nunc. Nulla facilisi. In eget fermentum lectus, et posuere mi. Quisque ac sem et purus tempus consequat.</p>
+    </div>
+
+    <div class="sidebar">
+        <h2>Sidebar</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et lorem nunc. Nulla facilisi. In eget fermentum lectus, et posuere mi. Quisque ac sem et purus tempus consequat.</p>
     </div>
 
