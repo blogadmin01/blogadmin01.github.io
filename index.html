@@ -9,9 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1503219345390-e3d91950d8fc');
-            background-size: cover;
-            background-position: center;
+            background-color: #f5f5f5;
         }
 
         .container {
@@ -21,13 +19,13 @@
         }
 
         h1 {
-            color: #fff;
+            color: #333;
             text-align: center;
             margin-bottom: 20px;
         }
 
         p {
-            color: #fff;
+            color: #333;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -43,12 +41,33 @@
             width: 100%;
             height: auto;
         }
+
+        .title-box {
+            display: inline-block;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .color-title-box {
+            background-color: #ff9900;
+        }
+
+        .photo-title-box {
+            background-image: url('https://images.unsplash.com/photo-1503219345390-e3d91950d8fc');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to My Homepage</h1>
         <p>This is a heavily designed homepage with a background picture, title, description, and six individual pictures.</p>
+        <div class="title-box color-title-box">Title Box with Single Color</div>
+        <div class="title-box photo-title-box">Title Box with Background Photo</div>
         <div class="image-grid">
             <img src="https://via.placeholder.com/150" alt="">
             <img src="https://via.placeholder.com/150" alt="">
