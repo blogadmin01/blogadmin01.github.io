@@ -18,6 +18,24 @@
             color: #fff;
             padding: 10px;
             text-align: left;
+            position: relative;
+        }
+
+        .sidebar {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            z-index: 1000;
+        }
+
+        .sidebar button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         .content {
@@ -62,24 +80,25 @@
             body.classList.remove('dark-theme', 'blue-theme', 'gray-theme');
             body.classList.add(theme);
         }
+
+        function toggleSidebar() {
+            var sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+        }
     </script>
 </head>
 <body>
     <header>
         <h1>Ambrosia De Ismaelians</h1>
+        <button onclick="toggleSidebar()">Open Sidebar</button>
+        <div class="sidebar">
+            <button onclick="toggleTheme('dark-theme')">Dark Mode</button>
+            <button onclick="toggleTheme('white-theme')">Light Mode</button>
+        </div>
     </header>
 
     <div class="content">
         <h2>Home Economics 12 A</h2>
         <p>Home Economics 12 A, specifically in the kitchen, unfolds as an experiential journey transcending the mere acquisition of culinary expertise. Beyond the art of cooking, students delve into the science behind nutrition, exploring the impact of ingredients on health and well-being. The kitchen metamorphoses into a laboratory where experimentation meets gastronomy, and students learn to decipher the nutritional content of ingredients, crafting meals that harmonize taste and health.</p>
         <img src="received_674120828144186.jpeg" alt="HE 12 A">
-        <p>This holistic approach transforms the kitchen from a mere space of culinary creation into a realm where students not only refine their cooking skills but also cultivate an understanding of the broader implications of their culinary choices. The intersection of culinary artistry and nutritional science paints a comprehensive picture of Home Economics 12 A, fostering a well-rounded appreciation for the intricate dance of flavors and the nourishment it provides.</p>
-    </div>
-
-    <div class="footer">
-        <p>&copy; 2023 Ambrosia De Ismaelians. All rights reserved.</p>
-        <button onclick="toggleTheme('dark-theme')">Dark Mode</button>
-        <button onclick="toggleTheme('white-theme')">Light Mode</button>
-    </div>
-</body>
-</html>
+        <p>This holistic approach transforms the kitchen from a mere space of culinary creation into a realm where students not only refine their cooking skills but also cultivate an understanding of the broader implications of their culinary choices. The intersection of
