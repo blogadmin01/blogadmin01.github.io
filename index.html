@@ -11,18 +11,93 @@
 		<!-- Add your navigation menu here -->
 	</header>
 
-	<section id="highlights">
-		<!-- Add your highlights here -->
-	</section>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Homepage</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-	<section id="body">
-		<!-- Add the main content of your website here -->
-	</section>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-	<footer>
-		<!-- Add your copyright information and contact details here -->
-	</footer>
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
 
-	<!-- Add your JavaScript file here -->
+        .highlights {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            .highlight {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to My Homepage</h1>
+    </div>
+
+    <div class="highlights">
+        <div class="highlight">
+            <h2>Highlight 1</h2>
+            <img class="image" src="image1.jpg" alt="Highlight 1">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nulla quis nibh convallis, vitae iaculis lacus fermentum.</p>
+        </div>
+        <div class="highlight">
+            <h2>Highlight 2</h2>
+            <img class="image" src="image2.jpg" alt="Highlight 2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nulla quis nibh convallis, vitae iaculis lacus fermentum.</p>
+        </div>
+    </div>
+
+    <div class="body">
+        <h2>Welcome to the body of my homepage</h2>
+        <img class="image" src="image3.jpg" alt="Body image">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nulla quis nibh convallis, vitae iaculis lacus fermentum. In facilisis convallis nisl ac auctor. Donec bibendum scelerisque ante vitae facilisis. Sed elementum, velit eget vulputate volutpat, odio nisi volutpat dolor, eu volutpat dui massa in mi.</p>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2023 My Homepage</p>
+    </div>
+
 </body>
-</html>
+	</html>
