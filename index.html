@@ -1,103 +1,52 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Homepage</title>
-	<!-- Add your CSS file here -->
-</head>
-<body>
-	<header>
-		<!-- Add your logo here -->
-		<h1>Welcome to our website!</h1>
-		<!-- Add your navigation menu here -->
-	</header>
-
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Homepage</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .highlights {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .highlight {
-            background-color: #f1f1f1;
-            border: 1px solid #ddd;
-            margin: 10px;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .body {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .footer {
-            background-color: #f1f1f1;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .image {
-            width: 100%;
-            height: auto;
-        }
-
-        @media (max-width: 600px) {
-            .highlight {
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS stylesheet -->
 </head>
 <body>
-
-    <div class="header">
-        <h1>Welcome to My Homepage</h1>
-    </div>
-
-    <div class="highlights">
-        <div class="highlight">
-            <h2>Highlight 1</h2>
-            <img class="image" src="image1.jpg" alt="Highlight 1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nulla quis nibh convallis, vitae iaculis lacus fermentum.</p>
-        </div>
-        <div class="highlight">
-            <h2>Highlight 2</h2>
-            <img class="image" src="image2.jpg" alt="Highlight 2">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nulla quis nibh convallis, vitae iaculis lacus fermentum.</p>
-        </div>
-    </div>
-
-    <div class="body">
-        <h2>Welcome to the body of my homepage</h2>
-        <img class="image" src="image3.jpg" alt="Body image">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nulla quis nibh convallis, vitae iaculis lacus fermentum. In facilisis convallis nisl ac auctor. Donec bibendum scelerisque ante vitae facilisis. Sed elementum, velit eget vulputate volutpat, odio nisi volutpat dolor, eu volutpat dui massa in mi.</p>
-    </div>
-
-    <div class="footer">
-        <p>Copyright © 2023 My Homepage</p>
-    </div>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="blog-posts">
+            <h2>Latest Blog Posts</h2>
+            <article>
+                <h3>Blog Post Title 1</h3>
+                <p>This is a summary of the blog post 1. Click to read more.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article>
+                <h3>Blog Post Title 2</h3>
+                <p>This is a summary of the blog post 2. Click to read more.</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Category 1</a></li>
+                <li><a href="#">Category 2</a></li>
+                <li><a href="#">Category 3</a></li>
+            </ul>
+            <h3>Recent Posts</h3>
+            <ul>
+                <li><a href="#">Post 1</a></li>
+                <li><a href="#">Post 2</a></li>
+                <li><a href="#">Post 3</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2023 Blog Website. All Rights Reserved.</p>
+    </footer>
 </body>
-	</html>
+</html>
